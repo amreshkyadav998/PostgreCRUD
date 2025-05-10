@@ -94,7 +94,7 @@ const ProductController = {
 
       const { data, error } = await supabase
         .from('products')
-        .update({ name, price, description })
+        .update({ name, price, description,quantity })
         .eq('id', id)
         .select()
         .single();
